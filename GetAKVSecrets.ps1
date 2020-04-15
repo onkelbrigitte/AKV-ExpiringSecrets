@@ -11,7 +11,6 @@ $inXDays = $config.inXDays
 #calculate end date
 $endDate = (Get-Date).AddDays($inXDays)
 
-
 #authicate with SPN credentials
 $passwd = ConvertTo-SecureString $secret -AsPlainText -Force
 $pscredential = New-Object System.Management.Automation.PSCredential($appID, $passwd)
