@@ -8,9 +8,9 @@ $secret = $config.secret
 $tenantID = $config.tenantID
 $inXDays = $config.inXDays
 
+#calculate end date
 $endDate = (Get-Date).AddDays($inXDays)
 
-Write-Host $endDate
 
 #authicate with SPN credentials
 $passwd = ConvertTo-SecureString $secret -AsPlainText -Force
